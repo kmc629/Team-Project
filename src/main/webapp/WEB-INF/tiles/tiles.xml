@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+   <definition name="main" template="/WEB-INF/tiles/layout.jsp">
+      <put-attribute name="top" value="/WEB-INF/tiles/top.jsp"/>
+      <put-attribute name="mid" value="/WEB-INF/views/main.jsp" />
+      <put-attribute name="content" value="" />
+      <put-attribute name="reply" value="" />
+      <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
+   </definition>
+   
+   <definition name="book/admin_bookList" extends="main">
+     
+      <put-attribute name="content" value="/WEB-INF/views/book/admin_bookList.jsp" />
+    
+   </definition>
+   
+   <definition name="book/admin_bookListOne" extends="main">
+     
+      <put-attribute name="content" value="/WEB-INF/views/book/admin_bookListOne.jsp" />
+      <put-attribute name="reply" value="/WEB-INF/views/reply/replyboard.jsp" />
+   </definition>
+   
+   
+</tiles-definitions>
